@@ -1,0 +1,169 @@
+.modal {
+  display: none;
+
+  position: fixed;
+  z-index: 3;
+
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  overflow-y: auto;
+
+  background-image: linear-gradient(
+    49deg,
+    rgba(72, 17, 115, 0.9) 0%,
+    rgba(164, 17, 150, 0.902) 100%
+  );
+
+  &-wrap {
+    height: 100%;
+    padding-top: 15px;
+  }
+
+  &__content {
+    @extend .row;
+
+    position: relative;
+
+    margin: 0 20px;
+
+    max-width: 750px;
+    min-height: 551px;
+
+    border-radius: 16px;
+    background-color: #fff;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: $md) {
+      min-height: 450px;
+    }
+  }
+
+  &__left {
+    @extend .col-md-6;
+    @extend .col-sm-12;
+
+    padding-top: 126px;
+
+    border-right: 2px solid #a41196;
+
+    text-align: center;
+
+    @media screen and (max-width: $md) {
+      padding-top: 20px;
+      border-right: none;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 121px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 198px;
+
+    background: url(../assets/images/footer-bg.png) left / cover;
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &__right {
+    @extend .col-md-6;
+    @extend .col-sm-12;
+
+    padding: 36px 33px 0 34px;
+
+    @media screen and (max-width: $md) {
+      padding-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 17px;
+
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__input {
+    margin-bottom: 20px;
+    padding: 19px 0 22px 28px;
+
+    width: 100%;
+    height: 53px;
+
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    background-color: #f9f9f9;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__submit {
+    margin-bottom: 21px;
+
+    width: 157px;
+    height: 53px;
+
+    border: none;
+  }
+
+  &__text {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    color: #961191;
+
+    @media screen and (max-width: $sm) {
+      display: block;
+    }
+
+    &:hover {
+      color: #961191;
+      text-decoration: underline;
+    }
+  }
+
+  &__close {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    width: 51px;
+    height: 51px;
+
+    background: url(../assets/images/modal-close.svg);
+    background-size: cover;
+
+    cursor: pointer;
+
+    @media screen and (max-width: $md) {
+      top: -65px;
+      width: 40px;
+      height: 40px;
+    }
+
+    @media screen and (max-width: $sm) {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 40px;
+    }
+  }
+}

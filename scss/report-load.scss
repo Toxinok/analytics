@@ -1,0 +1,386 @@
+@import './general';
+
+.header {
+  background: $gradient;
+}
+
+.info {
+  @extend .row;
+
+  margin: 0 0 76px;
+
+  &__item {
+    @extend .col-sm-4;
+    @extend .col-12;
+
+    padding: 36px 0 23px 46px;
+
+    @media screen and (max-width: $md) {
+      padding-left: 25px;
+    }
+
+    @media screen and (max-width: $sm) {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &:nth-child(1) {
+      background-color: #fbf5ff;
+    }
+
+    &:nth-child(2) {
+      background-color: #f7edff;
+    }
+
+    &:nth-child(3) {
+      background-color: #f4e6ff;
+    }
+
+    &-title {
+      margin-bottom: 32px;
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 64px;
+    }
+
+    &-text {
+      max-width: 250px;
+      color: #434343;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+
+      @media screen and (max-width: $lg) {
+        max-width: 160px;
+      }
+
+      @media screen and (max-width: $md) {
+        max-width: 140px;
+      }
+
+      @media screen and (max-width: $sm) {
+        margin: 0 auto;
+      }
+
+      &--purple {
+        font-weight: 500;
+        color: purple;
+
+        @media screen and (max-width: $sm) {
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+.files {
+  &__load {
+    margin-bottom: 30px;
+  }
+
+  &__schema {
+    margin-bottom: 33px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto 50px;
+    border: none;
+    outline: none;
+  }
+
+  &__loader {
+    display: none;
+    text-align: center;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.load {
+  @extend .row;
+  margin-left: 0;
+  margin-right: 0;
+
+  position: relative;
+
+  padding-top: 48px;
+  border-radius: 5px;
+  border: 2px dashed rgba(164, 17, 150, 0.3);
+  min-height: 284px;
+
+  @media screen and (max-width: $lg) {
+    padding: 30px 0 10px;
+  }
+  
+  @media screen and (max-width: $sm) {
+    padding: 40px 15px 0;
+  }
+
+  &__title {
+    @extend .col-lg-3;
+
+    padding-left: 60px;
+    padding-right: 30px;
+    color: #434343;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+
+    @media screen and (max-width: $lg) {
+      margin-bottom: 10px;
+      padding: 0;
+
+      text-align: center;
+    }
+  }
+
+  &__block {
+    @extend .col-lg-6;
+    position: static;
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+
+    &--small {
+      margin-bottom: 18px;
+      opacity: 0.5;
+      color: #434343;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &--purple {
+      color: #a41196;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &--loading {
+      max-width: 490px;
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    z-index: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 auto 20px;
+    padding-left: 44px;
+
+    width: 284px;
+    height: 72px;
+
+    border-radius: 5px;
+    border: 2px solid #a41196;
+
+    color: #434343;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: left;
+
+    @media screen and (max-width: $sm) {
+      padding-left: 24px;
+      width: 242px;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      right: 31px;
+      transform: translateY(-50%);
+
+      width: 26px;
+      height: 29px;
+
+      background: url(../assets/images/load-icon.svg);
+      background-size: cover;
+    }
+
+    &.active {
+      background-color: #481173;
+      color: #fff;
+      cursor: default;
+
+      &::before {
+        content: '';
+
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 73px;
+        height: 100%;
+
+        background-color: #a41196;
+      }
+
+      &::after {
+        content: '';
+
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        right: 31px;
+        transform: translateY(-50%) rotate(45deg);
+
+        width: 8px;
+        height: 14px;
+
+        background: none;
+
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+      }
+    }
+  }
+
+  &__close {
+    display: none;
+    content: '';
+
+    z-index: 1;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+
+    width: 12px;
+    height: 12px;
+
+    background: url(../assets/images/close-icon.svg);
+    background-size: cover;
+
+    cursor: pointer;
+  }
+}
+
+.schema {
+  padding-top: 35px;
+  padding-left: 59px;
+
+  min-height: 146px;
+
+  background-color: #f9f9f9;
+
+  @media screen and (max-width: $lg) {
+    padding-bottom: 15px;
+  }
+
+  @media screen and (max-width: $md) {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  &__block {
+    @media screen and (max-width: $md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+    color: #434343;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__item {
+    position: relative;
+
+    padding-left: 30px;
+
+    color: #434343;
+    font-size: 16px;
+    font-weight: 400;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 75px;
+
+      @media screen and (max-width: $xl) {
+        margin-right: 50px;
+      }
+
+      @media screen and (max-width: $lg) {
+        margin-right: 100px;
+      }
+
+      @media screen and (max-width: $md) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media screen and (max-width: $lg) {
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .schema__check {
+      &::after {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 8px;
+        height: 8px;
+
+        background-color: #ffffff;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 10px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 1, 0.8);
+    background-color: #481173;
+    background-image: $gradient;
+  }
+}

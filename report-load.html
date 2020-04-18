@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Загрузка отчета</title>
+    <link rel="stylesheet" href="styles/report-load.css" />
+  </head>
+  <body>
+    <!-- MODAL - AUTH -->
+    <div class="modal">
+      <div class="modal-wrap">
+        <span class="modal__close"></span>
+        <div class="modal__content">
+          <div class="modal__left">
+            <img
+              src="assets/images/auth-logo.png"
+              alt="logo"
+              class="modal__logo"
+            />
+            <div class="modal__image"></div>
+          </div>
+          <div class="modal__right">
+            <h4 class="modal__title">Регистрация в сервисе</h4>
+            <form class="modal__form">
+              <input type="text" placeholder="Ваше имя" class="modal__input" />
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__input"
+              />
+              <input
+                type="text"
+                placeholder="+ 8 999 6524 4"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Пароль"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Повторить пароль"
+                class="modal__input"
+              />
+              <input
+                type="submit"
+                value="Регистрация"
+                class="modal__submit button"
+              />
+            </form>
+            <p class="modal__text">
+              Уже есть аккаунт?
+            </p>
+            <a href="#login" class="modal__link">Войдите в учетную запись</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- HEADER LOGO -->
+          <a href="/" class="header__logo">
+            <img src="./assets/images/header-logo.png" alt="header-logo" />
+          </a>
+
+          <!-- HEADER BURGER -->
+          <div class="header__burger" id="menu-burger-btn">
+            <span></span>
+          </div>
+
+          <!-- HEADER NAV -->
+          <nav class="header__nav nav">
+            <a href="#" class="nav__link">Как это работает</a>
+            <a href="#" class="nav__link">Преимущества</a>
+            <a href="#" class="nav__link">Гарантии</a>
+            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#auth-modal" class="nav__link nav__link--button"
+              >Личный кабинет</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="title">
+      <div class="container">
+        <div class="title__wrapper">
+          <h1 class="title__text">Загрузка отчета</h1>
+          <ol class="title__breadcrumb breadcrumb">
+            <li class="breadcrumb__item"><a href="/">Главная</a></li>
+            <li class="breadcrumb__item active">Загрузка отчета</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="menu">
+        <button class="menu__button">Мои отчеты</button>
+        <button class="menu__button menu__button--load">Загрузить отчет</button>
+      </section>
+
+      <section class="info">
+        <div class="info__item">
+          <div class="info__item-title">01</div>
+          <p class="info__item-text">
+            Загружаете данные за определённый период либо по дефициту
+          </p>
+        </div>
+        <div class="info__item">
+          <div class="info__item-title">02</div>
+          <p class="info__item-text">
+            Выбираете схему работы для дальнейшей статистики
+          </p>
+        </div>
+        <div class="info__item">
+          <div class="info__item-title">03</div>
+          <p class="info__item-text">
+            Нажимаете кнопку
+            <span class="info__item-text--purple">cформировать отчет</span>
+            и ожидаете отчёт
+          </p>
+        </div>
+      </section>
+
+      <form class="files">
+        <div class="files__labels">
+          <label class="files__load load files__loader"></label>
+  
+          <label class="files__load load files__label" data-dropzone-id="1">
+            <h3 class="load__title">Данные за месяц</h3>
+            <div class="load__block">
+              <p class="load__text">Перетащите сюда файлы</p>
+              <p class="load__text--small">или</p>
+              <input
+                name="data-month"
+                type="file"
+                class="load__input"
+                accept=".xls, .xlsx"
+              />
+              <div class="load__button">Выбрать файлы</div>
+              <p class="load__text--purple">
+                Расширение файла .xls, .xlsx
+              </p>
+              <p class="load__text--purple">Минимальный размер файлов 100мб</p>
+            </div>
+            <span class="load__close"></span>
+          </label>
+  
+          <label class="files__load load files__label" data-dropzone-id="2">
+            <h3 class="load__title">Данные по дефициту</h3>
+            <div class="load__block">
+              <p class="load__text">Перетащите сюда файлы</p>
+              <p class="load__text--small">или</p>
+              <input
+                name="data-deficit"
+                type="file"
+                class="load__input"
+                accept=".xls, .xlsx"
+              />
+              <div class="load__button">Выбрать файлы</div>
+              <p class="load__text--purple">
+                Расширение файла .xls, .xlsx
+              </p>
+              <p class="load__text--purple">Минимальный размер файлов 100мб</p>
+            </div>
+            <span class="load__close"></span>
+          </label>
+        </div>
+
+        <div class="files__schema schema">
+          <h3 class="schema__title">Выберите схему работы</h3>
+          <div class="schema__block">
+            <label class="schema__item">
+              Схема работы №1
+              <input type="radio" class="schema__input" name="schema-type" checked />
+              <span class="schema__check"></span>
+            </label>
+            <label class="schema__item">
+              Схема работы №2
+              <input type="radio" class="schema__input" name="schema-type" />
+              <span class="schema__check"></span>
+            </label>
+            <label class="schema__item">
+              Схема работы №3
+              <input type="radio" class="schema__input" name="schema-type" />
+              <span class="schema__check"></span>
+            </label>
+            <label class="schema__item">
+              Схема работы №4
+              <input type="radio" class="schema__input" name="schema-type" />
+              <span class="schema__check"></span>
+            </label>
+          </div>
+        </div>
+
+        <button class="files__button button--gradient">
+          Сформировать отчет
+        </button>
+      </form>
+    </div>
+
+    <div class="footer__background"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#" class="footer__logo">
+              <img src="assets/images/footer-logo.png" alt="company-logo" />
+            </a>
+
+            <span class="footer__copyright">Все права защищены © 2020</span>
+          </div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__link">Как это работает</a>
+            <a href="#" class="footer__link">Статистика</a>
+            <a href="#" class="footer__link">Гарантии</a>
+            <a href="#" class="footer__link">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+    <script src="scripts/jquery.slim.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

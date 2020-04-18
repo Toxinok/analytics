@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список отчетов</title>
+    <link rel="stylesheet" href="styles/reports-list.css" />
+  </head>
+  <body>
+    <!-- MODAL - AUTH -->
+    <div class="modal">
+      <div class="modal-wrap">
+        <span class="modal__close"></span>
+        <div class="modal__content">
+          <div class="modal__left">
+            <img
+              src="assets/images/auth-logo.png"
+              alt="logo"
+              class="modal__logo"
+            />
+            <div class="modal__image"></div>
+          </div>
+          <div class="modal__right">
+            <h4 class="modal__title">Регистрация в сервисе</h4>
+            <form class="modal__form">
+              <input type="text" placeholder="Ваше имя" class="modal__input" />
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__input"
+              />
+              <input
+                type="text"
+                placeholder="+ 8 999 6524 4"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Пароль"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Повторить пароль"
+                class="modal__input"
+              />
+              <input
+                type="submit"
+                value="Регистрация"
+                class="modal__submit button"
+              />
+            </form>
+            <p class="modal__text">
+              Уже есть аккаунт?
+            </p>
+            <a href="#login" class="modal__link">Войдите в учетную запись</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- HEADER LOGO -->
+          <a href="/" class="header__logo">
+            <img src="./assets/images/header-logo.png" alt="header-logo" />
+          </a>
+
+          <!-- HEADER BURGER -->
+          <div class="header__burger" id="menu-burger-btn">
+            <span></span>
+          </div>
+
+          <!-- HEADER NAV -->
+          <nav class="header__nav nav">
+            <a href="#" class="nav__link">Как это работает</a>
+            <a href="#" class="nav__link">Преимущества</a>
+            <a href="#" class="nav__link">Гарантии</a>
+            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#auth-modal" class="nav__link nav__link--button"
+              >Личный кабинет</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="title">
+      <div class="container">
+        <div class="title__wrapper">
+          <h1 class="title__text">Список отчетов</h1>
+          <ol class="title__breadcrumb breadcrumb">
+            <li class="breadcrumb__item"><a href="/">Главная</a></li>
+            <li class="breadcrumb__item active">Список отчетов</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="menu">
+        <button class="menu__button">Загрузка данных</button>
+        <button class="menu__button menu__button--load">Настройки</button>
+        <button class="menu__button menu__button--load">Выход</button>
+      </section>
+
+      <section class="reports">
+        <h3 class="reports__title">Мои отчеты</h3>
+
+        <div class="reports__row">
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">01</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">02</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">03</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">04</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reports__row">
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">01</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">02</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">03</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">04</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reports__row">
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">01</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">02</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">03</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">04</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reports__row">
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">01</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">02</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">03</span>
+              <h5 class="reports__name">Отчет от 04 марта 2020</h5>
+              <div class="reports__status reports__status--load">
+                В обработке
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+          <div class="reports__item-wrapper">
+            <div class="reports__item">
+              <span class="reports__number">04</span>
+              <h5 class="reports__name">Отчет от 04 Сентября 2020</h5>
+              <div class="reports__status reports__status--ready">
+                Отчет готов
+              </div>
+              <span class="reports__close"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="pagination">
+        <a href="#prev" class="pagination__prev">предыдующая страница</a>
+        <div class="pagination__page">01</div>
+        <div class="pagination__page">02</div>
+        <div class="pagination__page">03</div>
+        <div class="pagination__page">04</div>
+        <div class="pagination__page">05</div>
+        <div class="pagination__page">06</div>
+        <div class="pagination__page pagination__page--skip">...</div>
+        <div class="pagination__page">14</div>
+        <div class="pagination__page">15</div>
+        <div class="pagination__page">16</div>
+        <a href="#next" class="pagination__next">следующая страница</a>
+      </div>
+    </div>
+
+    <div class="footer__background"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#" class="footer__logo">
+              <img src="assets/images/footer-logo.png" alt="company-logo" />
+            </a>
+
+            <span class="footer__copyright">Все права защищены © 2020</span>
+          </div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__link">Как это работает</a>
+            <a href="#" class="footer__link">Статистика</a>
+            <a href="#" class="footer__link">Гарантии</a>
+            <a href="#" class="footer__link">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+    <script src="./scripts/jquery.slim.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

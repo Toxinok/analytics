@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="styles/personal-cabinet.css" />
+  </head>
+  <body>
+    <!-- MODAL - AUTH -->
+    <div class="modal">
+      <div class="modal-wrap">
+        <span class="modal__close"></span>
+        <div class="modal__content">
+          <div class="modal__left">
+            <img
+              src="assets/images/auth-logo.png"
+              alt="logo"
+              class="modal__logo"
+            />
+            <div class="modal__image"></div>
+          </div>
+          <div class="modal__right">
+            <h4 class="modal__title">Регистрация в сервисе</h4>
+            <form class="modal__form">
+              <input type="text" placeholder="Ваше имя" class="modal__input" />
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__input"
+              />
+              <input
+                type="text"
+                placeholder="+ 8 999 6524 4"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Пароль"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Повторить пароль"
+                class="modal__input"
+              />
+              <input
+                type="submit"
+                value="Регистрация"
+                class="modal__submit button"
+              />
+            </form>
+            <p class="modal__text">
+              Уже есть аккаунт?
+            </p>
+            <a href="#login" class="modal__link">Войдите в учетную запись</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- HEADER LOGO -->
+          <a href="/" class="header__logo">
+            <img src="./assets/images/header-logo.png" alt="header-logo" />
+          </a>
+
+          <!-- HEADER BURGER -->
+          <div class="header__burger" id="menu-burger-btn">
+            <span></span>
+          </div>
+
+          <!-- HEADER NAV -->
+          <nav class="header__nav nav">
+            <a href="#" class="nav__link">Как это работает</a>
+            <a href="#" class="nav__link">Преимущества</a>
+            <a href="#" class="nav__link">Гарантии</a>
+            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#auth-modal" class="nav__link nav__link--button"
+              >Личный кабинет</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="title">
+      <div class="container">
+        <div class="title__wrapper">
+          <h1 class="title__text">Личный кабинет</h1>
+          <ol class="title__breadcrumb breadcrumb">
+            <li class="breadcrumb__item"><a href="/">Главная</a></li>
+            <li class="breadcrumb__item active">Личный кабинет</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="popup popup--success">
+        Изменения успешно внесены
+      </div>
+
+      <section class="rate">
+        <div class="rate__block">
+          <p class="rate__name">
+            Тариф: <span class="rate__name--gradient">Годовой</span>
+          </p>
+          <p class="rate__name">
+            Оплачен до: <span class="rate__name--gradient">05 июня 2022</span>
+          </p>
+        </div>
+
+        <p class="rate__text">
+          Если вам необходимо продлить тарифный план, то можете перезвонить по
+          номеру <a href="#" class="rate__text--link">8 800 600 33 22</a> либо
+          написать на почту
+          <a href="#" class="rate__text--link">support@mail.ru</a>
+        </p>
+      </section>
+
+      <form class="user">
+        <label for="formName" class="user__title">
+          Ваше имя
+        </label>
+        <input
+          type="text"
+          class="user__input"
+          id="formName"
+          placeholder="Василий"
+        />
+
+        <label for="formEmail" class="user__title">
+          Электронная почта
+        </label>
+        <input
+          type="email"
+          class="user__input"
+          id="formEmail"
+          placeholder="vasiliy.fedorishchev@gmail.com"
+        />
+
+        <label for="formPhone" class="user__title">
+          Номер телефона
+        </label>
+        <input
+          type="text"
+          class="user__input"
+          id="formPhone"
+          placeholder="+ 8 999 222 66"
+        />
+
+        <label for="formPass" class="user__title">
+          Изменить пароль
+        </label>
+        <div class="d-flex">
+          <div class="user__input-wrapper">
+            <input
+              type="password"
+              class="user__input"
+              id="formPass"
+              placeholder="*********"
+            />
+          </div>
+
+          <div class="user__input-wrapper">
+            <input
+              type="password"
+              class="user__input"
+              id="formPassRepeat"
+              placeholder="*********"
+            />
+          </div>
+        </div>
+        <input
+          type="submit"
+          value="Изменить"
+          class="user__submit button--gradient"
+        />
+      </form>
+    </div>
+
+    <div class="footer__background"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#" class="footer__logo">
+              <img src="assets/images/footer-logo.png" alt="company-logo" />
+            </a>
+
+            <span class="footer__copyright">Все права защищены © 2020</span>
+          </div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__link">Как это работает</a>
+            <a href="#" class="footer__link">Статистика</a>
+            <a href="#" class="footer__link">Гарантии</a>
+            <a href="#" class="footer__link">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+    <script src="./scripts/jquery.slim.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

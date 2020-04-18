@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Лендинг</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+  </head>
+  <body>
+    <!-- MODAL - AUTH -->
+    <div class="modal">
+      <div class="modal-wrap">
+        <span class="modal__close"></span>
+        <div class="modal__content">
+          <div class="modal__left">
+            <img
+              src="./assets/images/auth-logo.png"
+              alt="logo"
+              class="modal__logo"
+            />
+            <div class="modal__image"></div>
+          </div>
+          <div class="modal__right">
+            <h4 class="modal__title">Регистрация в сервисе</h4>
+            <form class="modal__form">
+              <input type="text" placeholder="Ваше имя" class="modal__input" />
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__input"
+              />
+              <input
+                type="text"
+                placeholder="+ 8 999 6524 4"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Пароль"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Повторить пароль"
+                class="modal__input"
+              />
+              <input
+                type="submit"
+                value="Регистрация"
+                class="modal__submit button"
+              />
+            </form>
+            <p class="modal__text">
+              Уже есть аккаунт?
+            </p>
+            <a href="#login" class="modal__link">Войдите в учетную запись</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION - WELCOME -->
+    <section class="welcome">
+      <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+          <div class="container">
+            <div class="header__wrapper">
+              <!-- HEADER LOGO -->
+              <a href="/" class="header__logo">
+                <img src="./assets/images/header-logo.png" alt="header-logo" />
+              </a>
+
+              <!-- HEADER BURGER -->
+              <div class="header__burger" id="menu-burger-btn">
+                <span></span>
+              </div>
+
+              <!-- HEADER NAV -->
+              <nav class="header__nav nav">
+                <a href="#" class="nav__link">Как это работает</a>
+                <a href="#" class="nav__link">Преимущества</a>
+                <a href="#" class="nav__link">Гарантии</a>
+                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#auth-modal" class="nav__link nav__link--button"
+                  >Личный кабинет</a
+                >
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <!-- HEADER WELCOME -->
+        <div class="welcome__main-block">
+          <h4 class="welcome__text--selected lines">Узнайте как</h4>
+          <h1 class="welcome__title">
+            Поднять продажи
+            <span class="welcome__title--light">на Wildberries?</span>
+          </h1>
+
+          <p class="welcome__text">
+            Analytics - уникальный сервис аналитики продаж, который в секунды
+            выстроит Вашу новую стратегию на Wildberries и поднимет продажи в
+            2-3 раза!
+          </p>
+
+          <img
+            class="welcome__image"
+            src="./assets/images/welcome.png"
+            alt="welcome-image"
+          />
+
+          <div>
+            <a
+              href="#"
+              class="welcome__button button button--medium lines lines--button"
+            >
+              Подключиться
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION - HOW IT WORKS -->
+    <section class="how-it-works">
+      <div class="row">
+        <div class="section-title">
+          <h2 class="section-title__text">Как это работает</h2>
+          <div class="section-title__des">
+            <div class="section-title__des-content">Конкретные шаги</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="steps__item step">
+          <div class="step__number">
+            <img src="./assets/images/how-it-works-step-1.svg" alt="" />
+          </div>
+          <div class="step__text">Подключитесь</div>
+        </div>
+
+        <div class="steps__item step">
+          <div class="step__number">
+            <img src="./assets/images/how-it-works-step-2.svg" alt="" />
+          </div>
+          <div class="step__text">Загрузите 3 таблицы</div>
+        </div>
+
+        <div class="steps__item step">
+          <div class="step__number">
+            <img src="./assets/images/how-it-works-step-3.svg" alt="" />
+          </div>
+          <div class="step__text">Сформируйте отчет</div>
+        </div>
+
+        <div class="steps__item step">
+          <div class="step__number">
+            <img src="./assets/images/how-it-works-step-4.svg" alt="" />
+          </div>
+          <div class="step__text">Увеличьте продажи</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="video-wrapper">
+          <video
+            loop="true"
+            muted="muted"
+            autoplay
+            playsinline
+            poster="assets/images/video-poster.jpg"
+          >
+            <source src="assets/infovideo.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION - ADVANTAGES -->
+    <section class="adv">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 class="section-title__text">Преимущества</h2>
+            <div class="section-title__des">
+              <div class="section-title__des-content">Наши лучшие стороны</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="adv__content">
+          <div class="adv__loop-img">
+            <div class="adv__item-row">
+              <div class="adv__item-wrap">
+                <div class="adv__item adv-1">Удобный интерфейс</div>
+              </div>
+            </div>
+
+            <div class="adv__item-row">
+              <div class="adv__item-wrap adv__item-wrap--small">
+                <div class="adv__item adv-2">Рост продаж</div>
+              </div>
+              <div class="adv__item-wrap adv__item-wrap--small">
+                <div class="adv__item adv-3">Рейтинг товара</div>
+              </div>
+            </div>
+
+            <div class="adv__item-row">
+              <div class="adv__item-wrap">
+                <div class="adv__item adv-4">
+                  Отслеживание ситуации по каждому бренду
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="adv__hero">
+            <img
+              class="adv__hero-img"
+              src="./assets/images/adv-report.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION - STATISTICS -->
+    <section class="statistics">
+      <div class="row">
+        <div class="section-title">
+          <h2 class="section-title__text">Статистика</h2>
+          <div class="section-title__des">
+            <div class="section-title__des-content">Как поднять продажи</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main__content-l">
+          <h3 class="statistics__sub-title">
+            Анализируйте выкуп и продажи по-новому!
+          </h3>
+          <p class="statistics__sub-des">
+            Новый, уникальный сервис аналитики Analytics за 2-3 секунды
+            проанализирует Ваши продажи, выкуп и дефицит. Выведет данные
+            аналитики в удобном графическом формате. И буквально покажет, чем
+            торговать, чтобы поднять продажи за месяц в 2-3 раза.
+          </p>
+        </div>
+        <div class="main__content-r">
+          <img
+            class="main__content-r__img"
+            src="./assets/images/statistics-hero.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="delimeter"></div>
+
+      <h3 class="statistics__sub-title">Аналитики Wildberries</h3>
+      <!-- <div class="sec">
+        <div class="sec__content-l">
+        </div>
+      </div> -->
+      <div class="sec">
+        <div class="sec__content-l">
+          <p class="statistics__sub-des">
+            Сервис Analytics был основан в 2018 году, и позволил нескольким
+            десяткам компаний поднять в разы их продажи на Wildberries за счет
+            удобной и быстрой аналитики.
+          </p>
+        </div>
+        <div class="sec__content-r">
+          <p class="statistics__sub-des">
+            Эпоха скучных и неинформативных Excel таблиц Wildberries ушла в
+            прошлое. Все успешные продавцы анализируют свои продажи с помощью
+            наглядной статистики сервиса Analytics, который за 3 секунды делает
+            месячную работу 2 менеджеров-аналитиков.
+          </p>
+        </div>
+      </div>
+
+      <div class="sec-hero">
+        <img src="./assets/images/statistics-sec-hero.jpg" alt="" />
+      </div>
+
+      <div class="statistics__button">
+        <a href="#" class="button button--medium lines lines--button"
+          >Подключиться</a
+        >
+      </div>
+    </section>
+
+    <!-- SECTION - TARIFFS -->
+    <section class="tarrifs">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 class="section-title__text">Тарифы</h2>
+            <div class="section-title__des">
+              <div class="section-title__des-content">Выберите тариф</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="tarrifs__content">
+            <div class="tarrif">
+              <div class="tarrif__title">Ежемесячно</div>
+              <div class="tarrif__price">3000руб.</div>
+              <div class="tarrif__des">
+                + 5000 за подключение и первоначальную настройку
+              </div>
+              <a href="" class="button button--small">Подключиться</a>
+            </div>
+            <div class="tarrif tarrif--gradient tarrif--big">
+              <div class="tarrif__title">Ежегодно</div>
+              <div class="tarrif__price">18000руб.</div>
+              <div class="tarrif__des">
+                Бесплатное подключение <br />50% экономии <br />Поддержка 24/7
+              </div>
+              <a href="" class="button button--small button--white"
+                >Подключиться</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION - PROTECTION -->
+    <section class="protection">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 class="section-title__text">Ваши данные надежно защищены</h2>
+            <div class="section-title__des">
+              <div class="section-title__des-content">Защита по протоколу</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="protection__text">
+            <p>
+              Ваши пароли хранятся в закодированном виде и передаются по
+              защищенному протоколу. Сервера находятся в Калифорнии США, что
+              обеспечивает высокую защиту ваших данных от третьих лиц!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION - FEEDBACK -->
+    <section class="feedback">
+      <div class="feedback__inner">
+        <div class="feedback__content-l">
+          <div class="feedback__content-l-inner">
+            <div class="section-title">
+              <h2 class="section-title__text">Отзывы</h2>
+              <div class="section-title__des">
+                <div class="section-title__des-content">
+                  Отзывы тех, кто уже подключился
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedback__content-r feedback-slider">
+          <div class="feedback-slider__slide-wrap">
+            <div class="slider-mask">
+              <div class="slider-mask__logo"></div>
+            </div>
+
+            <div class="feedback-slider__slide-inner" id="feedback-slider">
+              <!-- SLIDE -->
+              <div class="feedback-slider__slide slide">
+                <div class="slide__content">
+                  <p class="slide__des">
+                    У меня уже был шампунь для волос от OrganicZone для жирных у
+                    корней и сухих на кончиках волос из другой серии. Мне он
+                    вполне понравился, так что решила купить шампунь и бальзам с
+                    таким же действием из другой серии.
+                  </p>
+                  <div class="slide__author">Rikki Valgiro</div>
+                </div>
+                <div class="slide__date">24 марта 2020</div>
+              </div>
+
+              <!-- SLIDE -->
+              <div class="feedback-slider__slide slide">
+                <div class="slide__content">
+                  <p class="slide__des">
+                    2У меня уже был шампунь для волос от OrganicZone для жирных
+                    у корней и сухих на кончиках волос из другой серии. Мне он
+                    вполне понравился, так что решила купить шампунь и бальзам с
+                    таким же действием из другой серии.
+                  </p>
+                  <div class="slide__author">Rikki Valgiro</div>
+                </div>
+                <div class="slide__date">24 октября 2020</div>
+              </div>
+
+              <!-- SLIDE -->
+              <div class="feedback-slider__slide slide">
+                <div class="slide__content">
+                  <p class="slide__des">
+                    33У меня уже был шампунь для волос от OrganicZone для жирных
+                    у корней и сухих на кончиках волос из другой серии. Мне он
+                    вполне понравился, так что решила купить шампунь и бальзам с
+                    таким же действием из другой серии.
+                  </p>
+                  <div class="slide__author">Rikki Valgiro</div>
+                </div>
+                <div class="slide__date">24 сентября 2020</div>
+              </div>
+            </div>
+          </div>
+          <div class="feedback-slider__nav">
+            <div class="slider-dots"></div>
+
+            <div>
+              <div class="slider-arrow-l"></div>
+              <div class="slider-arrow-r"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer__background"></div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#" class="footer__logo">
+              <img src="assets/images/footer-logo.png" alt="company-logo" />
+            </a>
+
+            <span class="footer__copyright">Все права защищены © 2020</span>
+          </div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__link">Как это работает</a>
+            <a href="#" class="footer__link">Статистика</a>
+            <a href="#" class="footer__link">Гарантии</a>
+            <a href="#" class="footer__link">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+    <script src="./scripts/jquery.slim.min.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

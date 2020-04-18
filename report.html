@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отчет</title>
+    <link rel="stylesheet" href="styles/report.css" />
+  </head>
+  <body>
+    <!-- MODAL - AUTH -->
+    <div class="modal">
+      <div class="modal-wrap">
+        <span class="modal__close"></span>
+        <div class="modal__content">
+          <div class="modal__left">
+            <img
+              src="assets/images/auth-logo.png"
+              alt="logo"
+              class="modal__logo"
+            />
+            <div class="modal__image"></div>
+          </div>
+          <div class="modal__right">
+            <h4 class="modal__title">Регистрация в сервисе</h4>
+            <form class="modal__form">
+              <input type="text" placeholder="Ваше имя" class="modal__input" />
+              <input
+                type="email"
+                placeholder="Электронная почта"
+                class="modal__input"
+              />
+              <input
+                type="text"
+                placeholder="+ 8 999 6524 4"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Пароль"
+                class="modal__input"
+              />
+              <input
+                type="password"
+                placeholder="Повторить пароль"
+                class="modal__input"
+              />
+              <input
+                type="submit"
+                value="Регистрация"
+                class="modal__submit button"
+              />
+            </form>
+            <p class="modal__text">
+              Уже есть аккаунт?
+            </p>
+            <a href="#login" class="modal__link">Войдите в учетную запись</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <!-- HEADER LOGO -->
+          <a href="/" class="header__logo">
+            <img src="./assets/images/header-logo.png" alt="header-logo" />
+          </a>
+
+          <!-- HEADER BURGER -->
+          <div class="header__burger" id="menu-burger-btn">
+            <span></span>
+          </div>
+
+          <!-- HEADER NAV -->
+          <nav class="header__nav nav">
+            <a href="#" class="nav__link">Как это работает</a>
+            <a href="#" class="nav__link">Преимущества</a>
+            <a href="#" class="nav__link">Гарантии</a>
+            <a href="#" class="nav__link">Отзывы</a>
+            <a href="#auth-modal" class="nav__link nav__link--button"
+              >Личный кабинет</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE NAV -->
+    <section class="title">
+      <div class="container">
+        <div class="title__wrapper">
+          <h1 class="title__text">Список отчетов</h1>
+          <ol class="title__breadcrumb breadcrumb">
+            <li class="breadcrumb__item"><a href="/">Главная</a></li>
+            <li class="breadcrumb__item"><a href="/">Загрузка отчета</a></li>
+            <li class="breadcrumb__item active">Отчет</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="menu">
+        <button class="menu__button">Мои отчеты</button>
+        <button class="menu__button menu__button--load">Загрузить отчет</button>
+        <button class="menu__button menu__button--load">
+          Добавить текущий отчет
+        </button>
+      </section>
+
+      <div class="row">
+        <div class="report-stat-wrapper">
+          <div class="report-stat">
+            <div class="report-stat__content">
+              <div class="report-stat__title">Средний выкуп</div>
+              <div class="report-stat__amount">73%</div>
+              <div class="report-stat__des">Нормальный показатель</div>
+            </div>
+            <div class="report-stat__image-circle">
+              <span class="report-stat__circle-amount">73%</span>
+              <img src="./assets/images/report-circle.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="report-stat-wrapper">
+          <div class="report-stat">
+            <div class="report-stat__content">
+              <div class="report-stat__title">Заказано всего</div>
+              <div class="report-stat__amount">16487</div>
+              <div class="report-stat__des">Заказы всех товаров</div>
+            </div>
+            <img
+              class="report-stat__image-basket"
+              src="./assets/images/report-shopping-basket.svg"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div class="report-stat-wrapper">
+          <div class="report-stat">
+            <div class="report-stat__content">
+              <div class="report-stat__title">Продано всего</div>
+              <div class="report-stat__amount">7894</div>
+              <div class="report-stat__des">Продажи всех товаров</div>
+            </div>
+            <img
+              class="report-stat__image-ruble"
+              src="./assets/images/report-ruble.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col catalog-wrap">
+          <div class="catalog">
+            <!-- SETTINGS -->
+            <div class="catalog__settings">
+              <div class="settings">
+                <div class="settings__title">Сортировка:</div>
+                <div class="settings-sort">
+                  <a class="settings-sort__item active" href="">Рейтинг</a>
+                  <a class="settings-sort__item" href=""><span>Продажи за год</span></a>
+                  <a class="settings-sort__item" href=""><span>Продажи за месяц</span></a>
+                  <a class="settings-sort__item" href=""><span>Выкуп за год</span></a>
+                  <a class="settings-sort__item" href=""><span>Выкуп за месяц</span></a>
+                  <a class="settings-sort__item" href=""><span>Дефицит</span></a>
+                  <a class="settings-sort__item" href=""><span>Остаток на складе</span></a>
+                </div>
+              </div>
+
+              <div class="settings">
+                <div class="settings__title">Поиск:</div>
+                <div class="settings-filters">
+                  <div class="settings-filters__search">
+                    <img
+                      class="settings-filters__search-icon"
+                      src="./assets/images/search-icon.svg"
+                      alt=""
+                    />
+                    <input
+                      class="settings-filters__search-input"
+                      type="text"
+                      placeholder="Введите сюда ключевой запрос..."
+                    />
+                  </div>
+
+                  <!-- Add class 'active' to show filters -->
+                  <div class="settings-filters__select filters">
+                    <div class="filters__inner">
+                      <div
+                        class="filters__title"
+                        id="report-search-filters-btn"
+                      >
+                        <div>Выберите бренд</div>
+                        <div>
+                          <img
+                            src="./assets/images/small-arrow-down.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+
+                      <form action="" method="" class="filters__options">
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Louis Vuitton</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Prada</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Chanel</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Christian Dior</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Louis Vuitton</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Prada</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Chanel</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+
+                        <label class="label filter-option">
+                          <div class="filter-option__name">Christian Dior</div>
+                          <input type="checkbox" />
+                          <div><span></span></div>
+                        </label>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div class="export-links">
+                    <div class="export-links-pdf">
+                      <a href="" class="export-links__link">
+                        <span>Экспорт в PDF</span>
+                      </a>
+                      <img
+                        class="export-links-pdf__icon"
+                        src="./assets/images/pdf-icon.svg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="export-links-excel">
+                      <img
+                        class="export-links-excel__icon"
+                        src="./assets/images/excel-icon.svg"
+                        alt=""
+                      />
+                      <a href="" class="export-links__link">
+                        <span>Экспорт в Exel</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CATALOG -->
+            <div class="catalog-products-wrap">
+              <table class="catalog-products">
+                <thead>
+                  <tr>
+                    <th>Товар:</th>
+                    <th>Продано за год:</th>
+                    <th>Продано за месяц:</th>
+                    <th>Наличие, дефицит, ожидание:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="product">
+                        <div class="product__close"></div>
+                        <div class="product__id">01</div>
+
+                        <div class="product__header">
+                          <div class="product__name">Brigantina</div>
+                          <div class="product__model">3200/розовый</div>
+                          <div class="product__type">Кофта</div>
+                        </div>
+
+                        <div>
+                          <img src="./assets/images/tshirt-black.png" alt="" />
+                        </div>
+
+                        <div>
+                          <div class="product__rating-info">
+                            <div>Рейтинг</div>
+                            <div>43%</div>
+                          </div>
+                          <div class="product__rating-progress">
+                            <div
+                              class="product__rating-progress__bar"
+                              style="width: 43%;"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Заказано</th>
+                            <th>Продано</th>
+                            <th>Выкуп</th>
+                            <th>Маржа</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                5400
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>366</td>
+                            <td>
+                              <div>
+                                154
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>43%</td>
+                            <td class="red">-302,23р.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Заказано</th>
+                            <th>Продано</th>
+                            <th>Выкуп</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Наличие</th>
+                            <th>Дефицит</th>
+                            <th>Ожидание</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="product">
+                        <div class="product__close"></div>
+                        <div class="product__id">01</div>
+
+                        <div class="product__header">
+                          <div class="product__name">Brigantina</div>
+                          <div class="product__model">3200/розовый</div>
+                          <div class="product__type">Кофта</div>
+                        </div>
+
+                        <div>
+                          <img src="./assets/images/tshirt-black.png" alt="" />
+                        </div>
+
+                        <div>
+                          <div class="product__rating-info">
+                            <div>Рейтинг</div>
+                            <div>43%</div>
+                          </div>
+                          <div class="product__rating-progress">
+                            <div
+                              class="product__rating-progress__bar"
+                              style="width: 43%;"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Заказано</th>
+                            <th>Продано</th>
+                            <th>Выкуп</th>
+                            <th>Маржа</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                            <td>-302,23р.</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>366</td>
+                            <td>
+                              <div>
+                                154
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>43%</td>
+                            <td class="green">+16 302,65р.</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Заказано</th>
+                            <th>Продано</th>
+                            <th>Выкуп</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td class="product-details">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Размер</th>
+                            <th>Наличие</th>
+                            <th>Дефицит</th>
+                            <th>Ожидание</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>54</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                          <tr>
+                            <td>Итого:</td>
+                            <td>54</td>
+                            <td>
+                              <div>
+                                54
+                                <div class="details-info">
+                                  <div class="details-info__item">
+                                    <div>Москва</div>
+                                    <div>147</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Екатеринбург</div>
+                                    <div>4</div>
+                                  </div>
+                                  <div class="details-info__item">
+                                    <div>Норильск</div>
+                                    <div>19</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>54%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER BG -->
+    <div class="footer__background"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__left">
+            <a href="#" class="footer__logo">
+              <img src="assets/images/footer-logo.png" alt="company-logo" />
+            </a>
+
+            <span class="footer__copyright">Все права защищены © 2020</span>
+          </div>
+
+          <div class="footer__links">
+            <a href="#" class="footer__link">Как это работает</a>
+            <a href="#" class="footer__link">Статистика</a>
+            <a href="#" class="footer__link">Гарантии</a>
+            <a href="#" class="footer__link">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./scripts/bodyScrollLock.min.js"></script>
+    <script src="scripts/jquery.slim.min.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

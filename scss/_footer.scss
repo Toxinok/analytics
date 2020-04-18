@@ -1,0 +1,108 @@
+.footer {
+  height: 137px;
+  background-color: #f9f9f9;
+
+  @media screen and (max-width: $lg) {
+    height: 170px;
+  }
+
+  @media screen and (max-width: $sm) {
+    height: auto;
+  }
+
+  &__wrapper {
+    @extend .row;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media screen and (max-width: $lg) {
+      padding: 30px 0;
+    }
+
+    @media screen and (max-width: $sm) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    @extend .row;
+    @extend .col-lg-6;
+    @extend .col-md-7;
+    @extend .col-sm-7;
+    @extend .col-12;
+
+    @media screen and (max-width: $lg) {
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    @extend .col-lg-6;
+
+    @media screen and (max-width: $lg) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copyright {
+    @extend .col-lg-6;
+
+    align-self: center;
+
+    color: #434343;
+    font-size: 12px;
+    font-weight: 300;
+    opacity: 0.5;
+
+    @media screen and (max-width: $xl) {
+      text-align: center;
+    }
+  }
+
+  &__links {
+    @extend .col-lg-6;
+    @extend .col-md-5;
+    @extend .col-sm-5;
+    @extend .col-12;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $lg) {
+      flex-direction: column;
+      align-self: center;
+
+      height: 100%;
+
+      text-align: left;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  &__link {
+    color: #434343;
+    font-size: 14px;
+    font-weight: 300;
+
+    @media screen and (max-width: $sm) {
+      margin: 10px 0;
+    }
+
+    &:hover {
+      color: #a41196;
+      text-decoration: none;
+    }
+  }
+}
